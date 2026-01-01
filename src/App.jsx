@@ -1,3 +1,4 @@
+import Contact from "./Components/Contact";
 import Experience from "./Components/Experience";
 import Hero from "./Components/Hero";
 import My_Tech from "./Components/My_Tech";
@@ -39,6 +40,7 @@ const App = () => {
         <My_Tech/>
         <Projects/>
         <Experience/>
+        <Contact/>
         
       </div>
 

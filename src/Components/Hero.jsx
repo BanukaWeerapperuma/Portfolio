@@ -35,7 +35,7 @@ const Hero = () => {
               Banuka Weerapperuma
             </h1>
 
-            <span className="mt-4 bg-gradient-to-r from-stone-300 to-stone-600 bg-clip-text text-2xl sm:text-3xl tracking-tight text-transparent">
+            <span className="mt-4 bg-linear-to-r from-stone-300 to-stone-600 bg-clip-text text-2xl sm:text-3xl tracking-tight text-transparent">
               Full Stack Developer
             </span>
 

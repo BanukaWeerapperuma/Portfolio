@@ -26,7 +26,7 @@ export const PROJECTS = [
     image: project1,
     embedUrl: "https://coffee-shop-lovat-three.vercel.app/",
     deploys: [
-      { name: "Live", url: "https://coffee-shop-lovat-three.vercel.app/" }
+      { name: "Web Site", url: "https://coffee-shop-lovat-three.vercel.app/" }
     ],
     description:
       "Coffee Shop Website is a responsive and visually engaging front-end web project designed to showcase a modern coffee shop’s brand, products, and customer experience.",
@@ -49,9 +49,13 @@ export const PROJECTS = [
   {
     title: "Portfolio Website",
     image: project3,
+    embedUrl: "https://portfolio-one-bay-54.vercel.app/",
+    deploys: [
+      { name: "Web Site", url: "https://portfolio-one-bay-54.vercel.app/" }
+    ],
     description:
       "A personal portfolio website showcasing projects, skills, and contact information.",
-    technologies: ["Vite" , "React", "Tailwind css" , "Framer-Motion"],
+    technologies: ["Vite" , "React", "Tailwind css" , "Frame-Motion"],
   },
   
 ];

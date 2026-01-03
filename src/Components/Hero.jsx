@@ -1,4 +1,3 @@
-import profilePic from "../assets/Profile.webp";
 import profile from "../assets/profile.png";
 import CV from "../assets/banuka_weerapperuma.pdf";
 import { HERO_CONTENT } from "../constants";

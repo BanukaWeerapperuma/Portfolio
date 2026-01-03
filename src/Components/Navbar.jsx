@@ -1,5 +1,5 @@
 import { FaGithub, FaInstagram, FaLinkedin, FaWhatsapp } from "react-icons/fa";
-import logo from "../assets/Logo.webp";
+import logo from "../assets/logo.png";
 
 const phoneNumber = "+94763336479";
 const message = "Hello, I’m interested in your service. Please share more information.";

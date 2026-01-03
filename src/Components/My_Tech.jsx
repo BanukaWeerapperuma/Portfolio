@@ -1,10 +1,12 @@
 import { DiRedis } from 'react-icons/di'
 import { FaNode, FaNodeJs } from 'react-icons/fa'
-import { RiReactjsLine } from 'react-icons/ri'
+import { RiFlutterFill, RiReactjsFill, RiReactjsLine } from 'react-icons/ri'
 import { SiMongodb } from 'react-icons/si'
 import { TbBrandNextjs } from 'react-icons/tb'
 import { animate, motion, stagger } from "framer-motion";
 import { Repeat } from 'lucide-react'
+import { FaJava } from "react-icons/fa";
+import { SiMysql, SiTailwindcss, SiThreedotjs } from "react-icons/si";
 
 const iconVariants = (duration) => ({
     initial : {y : -10 },
@@ -37,34 +39,51 @@ const My_Tech = () => {
             <motion.div
                 initial = "initial"
                 animate = "animate"
-                variants={ iconVariants(2.5)}
-            >
+                variants={ iconVariants(1)}>
                 <RiReactjsLine className="text-7xl text-cyan-400"/>
             </motion.div>
 
-            <motion.div 
-                initial = "initial"
-                animate = "animate"
-                variants={ iconVariants(3)}
-            className="p-4">
-                <TbBrandNextjs className="text-7xl"/>
+
+            <motion.div
+            initial="initial"
+            animate="animate"
+            variants={iconVariants(2.5)}>
+            <SiThreedotjs className="text-7xl text-white" />
             </motion.div>
+
+
 
             <motion.div 
                 initial = "initial"
                 animate = "animate"
-                variants={ iconVariants(5)}
+                variants={ iconVariants(1.5)}
             className="p-4">
                 <SiMongodb className='text-7xl text-cyan-500'/>
             </motion.div>
 
-            <motion.div 
-                initial = "initial"
-                animate = "animate"
-                variants={ iconVariants(2)}
-            className="p-4">
-                <DiRedis className='text-7xl text-red-700'/>
+
+
+            <motion.div
+            initial="initial"
+            animate="animate"
+            variants={iconVariants(2)}>
+            <FaJava className="text-7xl text-red-500" />
             </motion.div>
+
+            <motion.div
+            initial="initial"
+            animate="animate"
+            variants={iconVariants(2.5)}>
+            <RiFlutterFill className="text-7xl text-blue-400" />
+            </motion.div>
+
+            <motion.div
+            initial="initial"
+            animate="animate"
+            variants={iconVariants(3)}>
+            <SiMysql className="text-7xl text-blue-600" />
+            </motion.div>
+
 
             <motion.div 
                 initial = "initial"
@@ -73,6 +92,14 @@ const My_Tech = () => {
             className="p-4">
                 <FaNodeJs className='text-7xl text-green-700'/>
             </motion.div>
+
+            <motion.div
+            initial="initial"
+            animate="animate"
+            variants={iconVariants(5)}>
+            <SiTailwindcss className="text-7xl text-sky-400" />
+            </motion.div>
+
 
             </motion.div>
     </div>

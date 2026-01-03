@@ -1,7 +1,8 @@
 import profilePic from "../assets/Profile.webp";
+import profile from "../assets/profile.png";
 import CV from "../assets/banuka_weerapperuma.pdf";
 import { HERO_CONTENT } from "../constants";
-import { motion, stagger } from "framer-motion";
+import { motion } from "framer-motion";
 
 const containerVariants = {
     hidden : {opacity: 0 , x: -100 },
@@ -21,6 +22,8 @@ const childVariants = {
 }
 
 const Hero = () => {
+  const paragraphs = HERO_CONTENT.trim().split(/\n\s*\n/).slice(0, 2);
+
   return (
     <section className="pb-10 lg:mb-36">
       <div className="container mx-auto px-6 lg:px-12">
@@ -29,16 +32,15 @@ const Hero = () => {
         <div className="flex flex-col items-center gap-10 lg:flex-row-reverse lg:items-center">
 
           {/* Profile Image (TOP on mobile) */}
-          <div className="w-full lg:w-1/2 flex justify-center lg:justify-end">
+          <div className="pt-50 w-full lg:w-1/2 flex justify-center lg:justify-end">
             <motion.img
-              src={profilePic}
+              src={profile}
               alt="profile"
-              className="border border-stone-900 rounded-3xl max-w-xs sm:max-w-sm lg:max-w-md"
-              width={650}
-              height={650}
-              initial = {{x:100 , opacity :0 }}
-              animate = {{x:0 , opacity :1 }}
-              transition={{duration :1 , delay : 1.5 }}/>
+              className="border border-stone-900 rounded-3xl max-w-xs sm:max-w-sm lg:max-w-md object-cover"
+              initial={{ x: 100, opacity: 0 }}
+              animate={{ x: 0, opacity: 1 }}
+              transition={{ duration: 1, delay: 1.5 }}
+            />
           </div>
 
           {/* Text Content */}
@@ -62,11 +64,15 @@ const Hero = () => {
               Full Stack Developer
             </motion.span>
 
-            <motion.p 
-            variants={childVariants}
-            className="mt-6 max-w-lg text-lg sm:text-xl leading-relaxed tracking-tight text-stone-400">
-              {HERO_CONTENT}
-            </motion.p>
+            {paragraphs.map((p, i) => (
+              <motion.p
+                key={i}
+                variants={childVariants}
+                className="mt-6 max-w-lg text-lg sm:text-xl leading-relaxed tracking-tight text-stone-400"
+              >
+                {p}
+              </motion.p>
+            ))}
 
             <motion.a
             variants={childVariants}

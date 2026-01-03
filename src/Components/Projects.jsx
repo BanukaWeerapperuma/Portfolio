@@ -1,7 +1,18 @@
+import React, { useState } from "react";
 import { PROJECTS } from "../constants";
 import { motion } from "framer-motion";
 
 const Projects = () => {
+  const [iframeUrls, setIframeUrls] = useState(PROJECTS.map((p) => p.embedUrl || null));
+
+  const setProjectIframe = (index, url) => {
+    setIframeUrls((prev) => {
+      const next = [...prev];
+      next[index] = url;
+      return next;
+    });
+  };
+
   return (
     <div className="pb-4">
       <motion.h2
@@ -16,20 +27,70 @@ const Projects = () => {
       {PROJECTS.map((project, index) => (
         <div key={index} className="mb-8 flex flex-wrap lg:justify-center">
           
-          {/* Image */}
+          {/* Image or Embedded Live Site */}
           <motion.div
             whileInView={{ opacity: 1, x: 0 }}
             initial={{ opacity: 0, x: -100 }}
             transition={{ duration: 1 }}
             className="w-full lg:w-1/4"
           >
-            <img
-              src={project.image}
-              width={250}
-              height={250}
-              alt={project.title}
-              className="mb-6 rounded"
-            />
+            {iframeUrls[index] ? (
+                      (() => {
+                        const vw = 250;
+                        const vh = 200;
+                        const ow = 1024; // original iframe width to scale from
+                        const oh = 768; // original iframe height to scale from
+                        const scale = Math.min(vw / ow, vh / oh);
+
+                        return (
+                          <div className="relative mb-6" style={{ width: vw, height: vh, overflow: "hidden" }}>
+                            <div style={{ transformOrigin: "0 0", transform: `scale(${scale})` }}>
+                              <iframe
+                                src={iframeUrls[index]}
+                                title={project.title}
+                                width={ow}
+                                height={oh}
+                                style={{ border: 0, display: "block" }}
+                              />
+                            </div>
+                            <a
+                              href={iframeUrls[index]}
+                              target="_blank"
+                              rel="noreferrer"
+                              className="absolute inset-0"
+                              aria-label={`Open ${project.title} in new tab`}
+                            />
+                          </div>
+                        );
+                      })()
+            ) : (
+              
+              
+              <img
+                src={project.image}
+                width={250}
+                height={250}
+                alt={project.title}
+                className="mb-6 rounded"
+              />
+
+            )}
+
+            {project.deploys && project.deploys.length > 0 && (
+              <div className="flex flex-wrap gap-2">
+                {project.deploys.map((d, i) => (
+                  <button
+                    key={i}
+                    type="button"
+                    onClick={() => setProjectIframe(index, d.url)}
+                    className="mr-2 mb-2 rounded bg-stone-800 px-3 py-1 text-sm font-medium text-stone-300"
+                  >
+                    {d.name || `Deploy ${i + 1}`}
+                  </button>
+                ))}
+              </div>
+            )}
+            
           </motion.div>
 
           {/* Content */}

@@ -58,6 +58,24 @@ export const PROJECTS = [
     technologies: ["Vite" , "React", "Tailwind css" , "Frame-Motion"],
   },
   
+
+   {
+    title: "Apple Website",
+    image: project3,
+    embedUrl: "https://apple-web-lac.vercel.app/",
+    deploys: [
+      { name: "Web Site", url: "https://apple-web-lac.vercel.app/" }
+    ],
+    description:
+      "Built an Apple-style web UI with 3D model integration, focusing on clean design, smooth animations, and a premium interactive user experience.",
+    technologies: ["Vite" , "React", "Tailwind css" , "gsap" , "three.js"],
+  },
+
+
+
+
+
+
 ];
 
 export const CONTACT = {

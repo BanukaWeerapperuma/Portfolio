@@ -41,9 +41,9 @@ export const PROJECTS = [
   
   {
     title: "Portfolio Website",
-    embedUrl: "https://portfolio-one-bay-54.vercel.app/",
+    embedUrl: "https://portfolio-teal-mu-wx2kuwiudv.vercel.app/",
     deploys: [
-      { name: "Web Site", url: "https://portfolio-one-bay-54.vercel.app/" }
+      { name: "Web Site", url: "https://portfolio-teal-mu-wx2kuwiudv.vercel.app/" }
     ],
     description:
       "A personal portfolio website showcasing projects, skills, and contact information.",

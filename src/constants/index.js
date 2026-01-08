@@ -61,7 +61,7 @@ export const PROJECTS = [
 
    {
     title: "Apple Website",
-    image: project3,
+    image: project4,
     embedUrl: "https://apple-web-lac.vercel.app/",
     deploys: [
       { name: "Web Site", url: "https://apple-web-lac.vercel.app/" }
@@ -69,6 +69,18 @@ export const PROJECTS = [
     description:
       "Built an Apple-style web UI with 3D model integration, focusing on clean design, smooth animations, and a premium interactive user experience.",
     technologies: ["Vite" , "React", "Tailwind css" , "gsap" , "three.js"],
+  },
+
+  {
+    title: "AI-powered Resume Analyzer",
+    image: project5,
+    embedUrl: "https://ai-resume-analyzer-seven-delta.vercel.app/",
+    deploys: [
+      { name: "Web App", url: "https://ai-resume-analyzer-seven-delta.vercel.app/" }
+    ],
+    description:
+      "An AI-powered Resume Analyzer built with React, Tailwind CSS, and Puter.js that evaluates resumes and provides intelligent insights. It helps users understand strengths, identify gaps, and improve their resumes with clear, data-driven feedback.",
+    technologies: ["Vite" , "React", "Tailwind css" , "puter.js" ],
   },
 
 

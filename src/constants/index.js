@@ -74,7 +74,7 @@ export const PROJECTS = [
   {
     title: "AI-powered Resume Analyzer",
     image: project5,
-    embedUrl: "https://ai-resume-analyzer-seven-delta.vercel.app/",
+    embedUrl: "https://ai-resume-analyzer-zeta-azure.vercel.app/",
     deploys: [
       { name: "Web App", url: "https://ai-resume-analyzer-seven-delta.vercel.app/" }
     ],

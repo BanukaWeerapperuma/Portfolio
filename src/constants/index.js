@@ -1,4 +1,4 @@
-export const HERO_CONTENT = ` I am a passionate Full Stack Developer and Software Engineering undergraduate at the University of Peradeniya, with strong hands-on experience in building modern, scalable applications. I work across the full development lifecycle using Java, MySQL, the MERN stack (MongoDB, Express, React, Node.js), Flutter, and Firebase.
+export const HERO_CONTENT = ` I am a passionate Full Stack Developer undergraduate at the University of Peradeniya, with strong hands-on experience in building modern, scalable applications. I work across the full development lifecycle using Java, MySQL, the MERN stack (MongoDB, Express, React, Node.js), Flutter, and Firebase.
 
 I enjoy turning ideas into real-world solutions, whether it’s web applications, mobile apps, or backend systems. Alongside my technical skills, I bring leadership, teamwork, and problem-solving experience gained through university organizations and freelance work. My goal is to continuously grow as a developer while contributing to impactful, user-focused software products.`;
 
@@ -81,7 +81,7 @@ export const PROJECTS = [
 ];
 
 export const CONTACT = {
-  address: "Eranawila , Meetiyagoda",
+  address: "Colombo , Sri Lanka",
   phoneNo: "+94763336479 ",
   email: "banukaweerapperuma@gmail.com",
 };

@@ -66,7 +66,7 @@ export const PROJECTS = [
     title: "AI-powered Resume Analyzer",
     embedUrl: "https://ai-resume-analyzer-zeta-azure.vercel.app/",
     deploys: [
-      { name: "Web App", url: "https://ai-resume-analyzer-seven-delta.vercel.app/" }
+      { name: "Web App", url: "https://ai-resume-analyzer-zeta-azure.vercel.app/" }
     ],
     description:
       "An AI-powered Resume Analyzer built with React, Tailwind CSS, and Puter.js that evaluates resumes and provides intelligent insights. It helps users understand strengths, identify gaps, and improve their resumes with clear, data-driven feedback.",
